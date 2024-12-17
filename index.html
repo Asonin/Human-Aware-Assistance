@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <!-- Meta tags for social media banners, these should be filled in appropriatly as they are your "business card" -->
+  <!-- Replace the content tag with appropriate information -->
+  <meta name="description" content="DESCRIPTION META TAG">
+  <meta property="og:title" content="SOCIAL MEDIA TITLE TAG"/>
+  <meta property="og:description" content="SOCIAL MEDIA DESCRIPTION TAG TAG"/>
+  <meta property="og:url" content="URL OF THE WEBSITE"/>
+  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X630-->
+  <meta property="og:image" content="static/image/your_banner_image.png" />
+  <meta property="og:image:width" content="1200"/>
+  <meta property="og:image:height" content="630"/>
+
+
+  <meta name="twitter:title" content="TWITTER BANNER TITLE META TAG">
+  <meta name="twitter:description" content="TWITTER BANNER DESCRIPTION META TAG">
+  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X600-->
+  <meta name="twitter:image" content="static/images/your_twitter_banner_image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <!-- Keywords for your paper to be indexed by-->
+  <meta name="keywords" content="KEYWORDS SHOULD BE PLACED HERE">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+  <title>Learning Human-aware Robot Policies for Adaptive Assistance</title>
+  <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+  rel="stylesheet">
+
+  <link rel="stylesheet" href="static/css/bulma.min.css">
+  <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+  href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="static/css/index.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
+  <script defer src="static/js/fontawesome.all.min.js"></script>
+  <script src="static/js/bulma-carousel.min.js"></script>
+  <script src="static/js/bulma-slider.min.js"></script>
+  <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+	    tex2jax: {
+	        inlineMath: [['$','$'], ['\\(','\\)']],
+	        processEscapes: true
+	    }
+	});
+    </script>
+  <script src="static/js/index.js"></script>
+</head>
+<body>
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <h1 class="xtitle is-1 publication-title">Learning Human-aware Robot Policies for Adaptive Assistance</h1>
+              <div class="is-size-5 publication-authors">
+              <!-- Paper authors -->
+                <span class="author-block">
+                  <a href="https://asonin.github.io/" target="_blank">Jason Qin</a><sup>1</sup></span>
+                <span class="author-block">
+                  <a href="https://oliverbansk.github.io/" target="_blank">Shikun Ban</a><sup>2</sup></span>
+                <span class="author-block">
+                    <a href="https://wentao.live/about.html" target="_blank">Wentao Zhu</a><sup>2</sup></span>
+                <span class="author-block">
+                    <a href="https://cfcs.pku.edu.cn/english/people/faculty/yizhouwang/index.htm" target="_blank">Yizhou Wang</a><sup>2</sup></span>
+                <span class="author-block">
+                    <a href="https://www3.cs.stonybrook.edu/~samaras/" target="_blank">Dimitris Samaras</a><sup>1</sup></span>
+              </div>
+
+              <div class="is-size-5 publication-authors">
+                <span class="author-block">Stony Brook University<sup>1</sup></span>
+                <span class="author-block">Peking University<sup>2</sup></span>
+                    <!-- <span class="eql-cntrb"><small><br><sup>*</sup>Indicates Equal Contribution</small></span> -->
+              </div>
+
+                  <div class="column has-text-centered">
+                    <div class="publication-links">
+                         <!-- Arxiv PDF link -->
+                      <!-- <span class="link-block">
+                        <a href="https://arxiv.org/pdf/<ARXIV PAPER ID>.pdf" target="_blank"
+                        class="external-link ">
+                        <span class="icon">
+                          <i class="fas fa-file-pdf"></i>
+                        </span>
+                        <span>Paper</span>
+                      </a>
+                    </span> -->
+
+                  <!-- Github link -->
+                  <span class="link-block">
+                    <a href="https://github.com/Asonin/Human-Aware-Assistance-Codespace" target="_blank"
+                    class="external-link ">
+                    <span class="icon">
+                      <i class="fab fa-github"></i>
+                    </span>
+                    <span>Code</span>
+                  </a>
+                </span>
+
+                <!-- ArXiv abstract Link -->
+                <span class="link-block">
+                  <a href="https://arxiv.org/abs/<ARXIV PAPER ID>" target="_blank"
+                  class="external-link ">
+                  <span class="icon">
+                    <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- Teaser-->
+<section class="hero teaser">
+  <div class="container is-max-desktop" style="width: 55%; margin: 0 auto;">
+    <div class="hero-body">
+      <img src="static/images/gifs/teaser_final_cut_v0-ezgif.com-optimize.gif"
+       alt="MY ALT TEXT"
+       style="width: 100%; height: auto; border: none;"
+       />
+      <h2 class="subtitle" style="text-align: justify;">
+        In our task scenario (illustrated by the feeding example), the robot's primary goal is to achieve the basic "feeding the food" task, represented by the <b>Task Reward</b>. However, as shown on the Left, the human user has more nuanced <b>Preference Rewards</b>, unknown to the robot, causing a misalignment between their reward functions. To address this, we propose a novel framework (Right) that goes beyond basic task fulfillment by introducing two modules: <b>Motion Anticipation</b> for predicting human motion and <b>Utility Inference</b> for estimating user preferences.
+      </h2>
+    </div>
+  </div>
+</section>
+<!-- End teaser-->
+
+<!-- Paper abstract -->
+<section class="section hero is-light">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3" style="text-align: left;">Abstract</h2>
+        <div class="subtitle has-text-justified">
+          <p>
+            Developing robots that can assist humans efficiently, safely, and adaptively is crucial for real-world applications such as healthcare. While previous work often assumes a centralized system for co-optimizing human-robot interactions, we argue that real-world scenarios are much more complicated, as humans have individual preferences regarding how tasks are performed. Robots typically lack direct access to these implicit preferences. However, to provide effective assistance, robots must still be able to recognize and adapt to the individual needs and preferences of different users. To address these challenges, we propose a novel framework in which robots infer human intentions and reason about human utilities through interaction. Our approach features two critical modules: the <b>anticipation module</b> is a motion predictor which captures spatial-temporal relationship between the robot agent and user agent, which contributes in predicting human behavior; the <b>utility module</b> infers the underlying human utility functions through progressive task demonstration sampling. Extensive experiments across various robot types and assistive tasks demonstrate that the proposed framework not only enhances task success and efficiency but also significantly improves user satisfaction, paving the way for more personalized and adaptive assistive robotic systems.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End paper abstract -->
+
+<!-- Framework-->
+
+<section class="section hero">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3" style="text-align: left;">Framework</h2>
+        <div class="container is-max-desktop" style="width: 100%; margin: 0 auto;">
+          <div class="hero-body">
+            <img src="static/images/framework_1202.jpg"
+             style="width: 100%; height: auto; border: none;"
+             />
+          </div>
+        </div>
+        <h2 class="title is-3" style="text-align: left;">Video Presentation</h2>
+        <div class="publication-video">
+          <!-- Youtube embed code here -->
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/yNTk-Wt6feA?si=VdhZl6VbQeJy7rxU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+          </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Framework -->
+
+<section class="section hero is-light">
+
+
+  <div class="container is-max-desktop" style="width: 100%; margin: 0 auto;">
+    <div class="columns is-centered">
+      <div class="column is-four-fifths">
+    <h2 class="title is-3" style="text-align: left;">Visualizations</h2>
+  </div>
+    </div>
+    <!-- <h2 class="title is-3" style="text-align: left;">Framework</h2> -->
+    <div class="container">
+      <div id="results-carousel" class="carousel results-carousel">
+        <!-- 第一个项目：三连 GIF -->
+        <div class="item">
+          <h2 class="title is-4">Adapting to different preference settings</h2>
+          <div class="gif-container">
+            <div class="gif-item">
+              <img src="static/images/gifs/transparent.gif" alt="GIF 1">
+              <div class="caption">Algorithm<br>
+                <em>Task Success</em><br>
+                <em>Human Reward</em><br>
+                <em>Task Reward</em><br>
+                <em>Preference Reward</em></div>
+            </div>
+            <div class="gif-item">
+              <img src="static/images/gifs/setting1/PPO_setting1.gif" alt="GIF 1">
+              <div class="caption"><em>PPO</em><br>
+                <em>✅</em><br>
+                <em>120.179</em><br>
+                <em>130.528</em><br>
+                <em>-10.349</em></div>
+            </div>
+            <div class="gif-item">
+              <img src="static/images/gifs/setting1/TD3_setting1.gif" alt="GIF 2">
+              <div class="caption"><em>TD3</em><br>
+                <em>✅</em><br>
+                <em>101.410</em><br>
+                <em>113.699</em><br>
+                <em>-12.290</em></div>
+            </div>
+            <div class="gif-item">
+              <img src="static/images/gifs/setting1/Ours_setting1.gif" alt="GIF 3">
+              <div class="caption"><em>Ours</em><br>
+                <em>✅</em><br>
+                <em><b>125.812</b></em><br>
+                <em><b>131.516</b></em><br>
+                <em><b>-5.704</b></em></div>
+            </div>
+          </div>
+          <h2 class="subtitle has-text-justified">
+            In setting 1, where the human prefers gentler delivering forces, our method produces slower and gentler delivery, whereas the baseline methods fails to do so, as the spoon is moving too fast when approaching the mouth.
+          </h2>
+        </div>
+
+        <!-- 第二个项目：三连 GIF -->
+        <div class="item">
+          <h2 class="title is-4">Adapting to different preference settings</h2>
+          <!-- <h2 class="title is-3">Preference Setting 4: Preferring no food spilled</h2> -->
+          <div class="gif-container">
+            <div class="gif-item">
+              <img src="static/images/gifs/transparent.gif" alt="GIF 1">
+              <div class="caption">Algorithm<br>
+                <em>Task Success</em><br>
+                <em>Human Reward</em><br>
+                <em>Task Reward</em><br>
+                <em>Preference Reward</em></div>
+            </div>
+            <div class="gif-item">
+              <img src="static/images/gifs/setting4/PPO_setting4.gif" alt="GIF 4">
+              <div class="caption"><em>PPO</em><br>
+                <em>❌</em><br>
+                <em>27.352</em><br>
+                <em>63.985</em><br>
+                <em>-36.63</em></div>
+            </div>
+            <div class="gif-item">
+              <img src="static/images/gifs/setting4/TD3_setting4.gif" alt="GIF 5">
+              <div class="caption"><em>TD3</em><br>
+                <em>❌</em><br>
+                <em>25.812</em><br>
+                <em>76.012</em><br>
+                <em>-50.20</em></div>
+            </div>
+            <div class="gif-item">
+              <img src="static/images/gifs/setting4/Ours_setting4.gif" alt="GIF 6">
+              <div class="caption"><em>Ours</em><br>
+                <em>✅</em><br>
+                <em><b>111.094</b></em><br>
+                <em><b>111.799</b></em><br>
+                <em><b>-0.705</b></em></div>
+            </div>
+          </div>
+          <h2 class="subtitle has-text-justified">
+            In setting 4, where the human prefers the robot to avoid spilling food, our learnt policy effectively recognizes and adapts to this preference, while the baseline methods fail to do so.
+In baseline policy rollouts, food are spilled midway, making both the preference reward and the task reward sub-optimal.
+          </h2>
+        </div>
+      </div>
+    </div>
+  </div>
+
+    <div class="container is-max-desktop" style="width: 100%; margin: 0 auto;">
+      <div id="results-carousel" class="carousel results-carousel">
+
+        <!-- 第一个项目：三连 GIF -->
+        <div class="item">
+          <h2 class="title is-4">Adapting to different tasks</h2>
+          <div class="gif-container">
+            <div class="gif-item">
+              <img src="static/images/gifs/transparent.gif" alt="GIF 1">
+              <div class="caption">Algorithm<br>
+                <em>Task Success</em><br>
+                <em>Human Reward</em><br>
+                <em>Task Reward</em><br>
+                <em>Preference Reward</em></div>
+            </div>
+            <div class="gif-item">
+              <img src="static/images/gifs/bathing/bathing_PPO.gif" alt="GIF 1">
+              <div class="caption"><em>PPO</em><br>
+                <em>❌</em><br>
+                <em>61.458</em><br>
+                <em>77.989</em><br>
+                <em>-16.531</em></div>
+            </div>
+            <div class="gif-item">
+              <img src="static/images/gifs/bathing/bathing_TD3.gif" alt="GIF 2">
+              <div class="caption"><em>TD3</em><br>
+                <em>❌</em><br>
+                <em>-29.015</em><br>
+                <em>-16.674</em><br>
+                <em>-12.341</em></div>
+            </div>
+            <div class="gif-item">
+              <img src="static/images/gifs/bathing/bathing_ours.gif" alt="GIF 3">
+              <div class="caption"><em>Ours</em><br>
+                <em>✅</em><br>
+                <em><b>126.759</b></em><br>
+                <em><b>132.344</b></em><br>
+                <em><b>-5.585</b></em></div>
+            </div>
+          </div>
+          <h2 class="subtitle has-text-justified">
+            In the bed bathing environment, a person lies on a bed in a random resting position, while a robot uses a washcloth to wipe off uniformly distributed water markers on the person's right arm. Our method efficiently and effectively completes this task.
+In contrast, with the baseline methods, the effective contact between the robot end-effector and the arm is significantly reduced. In the TD3 baseline, the end-effector even moves beneath the arm, making task completion impossible.
+          </h2>
+        </div>
+
+        <!-- 第二个项目：三连 GIF -->
+        <div class="item">
+          <h2 class="title is-4">Adapting to different tasks</h2>
+          <div class="gif-container">
+            <div class="gif-item">
+              <img src="static/images/gifs/transparent.gif" alt="GIF 1">
+              <div class="caption">Algorithm<br>
+                <em>Task Success</em><br>
+                <em>Human Reward</em><br>
+                <em>Task Reward</em><br>
+                <em>Preference Reward</em></div>
+            </div>
+            <div class="gif-item">
+              <img src="static/images/gifs/drinking/drinking_PPO_v2.gif" alt="GIF 4">
+              <div class="caption"><em>PPO</em><br>
+                <em>✅</em><br>
+                <em>332.545</em><br>
+                <em>463.184</em><br>
+                <em>-130.639</em></div>
+            </div>
+            <div class="gif-item">
+              <img src="static/images/gifs/drinking/drinking_TD3_v2.gif" alt="GIF 5">
+              <div class="caption"><em>TD3</em><br>
+                <em>❌</em><br>
+                <em>-140.366</em><br>
+                <em>-135.457</em><br>
+                <em>-4.910*</em></div>
+            </div>
+            <div class="gif-item">
+              <img src="static/images/gifs/drinking/drinking_Ours_v2.gif" alt="GIF 6">
+              <div class="caption"><em>Ours</em><br>
+                <em>✅</em><br>
+                <em><b>415.830</b></em><br>
+                <em><b>459.211</b></em><br>
+                <em><b>-43.382</b></em></div>
+            </div>
+          </div>
+          <h2 class="subtitle has-text-justified">
+            In the drinking environment, where a robot holds a cup of small particles representing water and helps a person drink this water,
+our method also completes the task efficiently and effectively. 
+In contrast, the PPO baseline methods produces less effective coordination policies. In the TD3 baseline, the robot end-effector even gets stuck mid-way.
+A * marks incomplete preference reward due to task failure.
+
+          </h2>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="container is-max-desktop" style="width: 100%; margin: 0 auto;">
+      <div id="results-carousel" class="carousel results-carousel">
+
+        <!-- 第一个项目：三连 GIF -->
+        <div class="item">
+          <h2 class="title is-4">Adapting to different robot types</h2>
+          <div class="gif-container">
+            <div class="gif-item">
+              <img src="static/images/gifs/transparent.gif" alt="GIF 1">
+              <div class="caption">Algorithm<br>
+                <em>Task Success</em><br>
+                <em>Human Reward</em><br>
+                <em>Task Reward</em><br>
+                <em>Preference Reward</em></div>
+            </div>
+            <div class="gif-item">
+              <img src="static/images/gifs/jaco/jaco_PPO.gif" alt="GIF 1">
+              <div class="caption"><em>PPO</em><br>
+                <em>✅</em><br>
+                <em>35.697</em><br>
+                <em>111.438</em><br>
+                <em>-75.741</em></div>
+            </div>
+            <div class="gif-item">
+              <img src="static/images/gifs/jaco/jaco_TD3.gif" alt="GIF 2">
+              <div class="caption"><em>TD3</em><br>
+                <em>✅</em><br>
+                <em>56.295</em><br>
+                <em>102.891</em><br>
+                <em>-46.596</em></div>
+            </div>
+            <div class="gif-item">
+              <img src="static/images/gifs/jaco/jaco_ours.gif" alt="GIF 3">
+              <div class="caption"><em>Ours</em><br>
+                <em>✅</em><br>
+                <em><b>106.825</b></em><br>
+                <em><b>113.533</b></em><br>
+                <em><b>-6.708</b></em></div>
+            </div>
+          </div>
+          <h2 class="subtitle has-text-justified">
+            With the Jaco robot, our method yields a clean delivery, while the baseline methods produce suboptimal policies, in which the spoon hit other facial parts.
+          </h2>
+        </div>
+
+        <!-- 第二个项目：三连 GIF -->
+        <div class="item">
+          <h2 class="title is-4">Adapting to different robot types</h2>
+          <div class="gif-container">
+            <div class="gif-item">
+              <img src="static/images/gifs/transparent.gif" alt="GIF 1">
+              <div class="caption">Algorithm<br>
+                <em>Task Success</em><br>
+                <em>Human Reward</em><br>
+                <em>Task Reward</em><br>
+                <em>Preference Reward</em></div>
+            </div>
+            <div class="gif-item">
+              <img src="static/images/gifs/pr2/pr2_PPO.gif" alt="GIF 4">
+              <div class="caption"><em>PPO</em><br>
+                <em>❌</em><br>
+                <em>-8.321</em><br>
+                <em>35.253</em><br>
+                <em>-43.575</em></div>
+            </div>
+            <div class="gif-item">
+              <img src="static/images/gifs/pr2/pr2_TD3.gif" alt="GIF 5">
+              <div class="caption"><em>TD3</em><br>
+                <em>❌</em><br>
+                <em>-82.014</em><br>
+                <em>-77.510</em><br>
+                <em>-4.505*</em></div>
+            </div>
+            <div class="gif-item">
+              <img src="static/images/gifs/pr2/pr2_ours.gif" alt="GIF 6">
+              <div class="caption"><em>Ours</em><br>
+                <em>✅</em><br>
+                <em><b>98.491</b></em><br>
+                <em><b>103.681</b></em><br>
+                <em><b>-5.191</b></em></div>
+            </div>
+          </div>
+          <h2 class="subtitle has-text-justified">
+            With the PR2 robot, our method also yields a clean delivery and avoided spilling food.
+In contrast, in the PPO baseline, the food spilled out almost entirely.
+In the TD3 baseline, the spoon stuck mid-way, making task success impossible.
+
+          </h2>
+        </div>
+
+        <!-- 第三个项目：三连 GIF -->
+        <div class="item">
+          <h2 class="title is-4">Adapting to different robot types</h2>
+          <div class="gif-container">
+            <div class="gif-item">
+              <img src="static/images/gifs/transparent.gif" alt="GIF 1">
+              <div class="caption">Algorithm<br>
+                <em>Task Success</em><br>
+                <em>Human Reward</em><br>
+                <em>Task Reward</em><br>
+                <em>Preference Reward</em></div>
+            </div>
+            <div class="gif-item">
+              <img src="static/images/gifs/Baxter/Baxter_PPO_v2.gif" alt="GIF 4">
+              <div class="caption"><em>PPO</em><br>
+                <em>✅</em><br>
+                <em>-8.571</em><br>
+                <em>103.787</em><br>
+                <em>-112.358</em></div>
+            </div>
+            <div class="gif-item">
+              <img src="static/images/gifs/Baxter/Baxter_TD3_v2.gif" alt="GIF 5">
+              <div class="caption"><em>TD3</em><br>
+                <em>✅</em><br>
+                <em>105.182</em><br>
+                <em>114.434</em><br>
+                <em>-9.253</em></div>
+            </div>
+            <div class="gif-item">
+              <img src="static/images/gifs/Baxter/Baxter_Ours_v2.gif" alt="GIF 6">
+              <div class="caption"><em>Ours</em><br>
+                <em>✅</em><br>
+                <em><b>124.308</b></em><br>
+                <em><b>132.242</b></em><br>
+                <em><b>-7.935</b></em></div>
+            </div>
+          </div>
+          <h2 class="subtitle has-text-justified">
+            With the Baxter robot, our method yields superior performance in terms of delivery cleanness and gentleness.
+In contrast, in the PPO baseline, the spoon hit other facial parts; 
+and in the TD3 baseline, the delivery was less gentler, making the preference reward suboptimal.
+
+          </h2>
+        </div>
+      </div>
+    </div>
+</section> 
+
+
+<!-- Youtube video -->
+<!-- <section class="hero is-light">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="column is-four-fifths">
+      <h2 class="title is-3" style="text-align: left;">Video Presentation</h2>
+          <div class="publication-video">
+            <iframe src="https://www.youtube.com/embed/JkaxUblCGz0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+          </div>
+    </div>
+  </div> 
+</div> 
+</section> -->
+<!-- End youtube video -->
+
+
+
+<!--BibTex citation -->
+  <section class="section" id="BibTeX">
+    <div class="container is-max-desktop content">
+      <h2 class="title" style="text-align: left;">BibTeX</h2>
+      <pre><code>BibTex Code Here</code></pre>
+    </div>
+</section>
+<!--End BibTex citation -->
+
+
+<!-- <footer class="footer">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+
+          <p>
+            This page was built using the <a href="https://github.com/vinthony/project-page-template">modification version</a> of <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a> from <a href="https://github.com/vinthony">vinthony</a>.
+            You are free to borrow the of this website, we just ask that you link back to this page in the footer. <br> This website is licensed under a <a rel="license"  href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
+            Commons Attribution-ShareAlike 4.0 International License</a>.
+          </p>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</footer> -->
+
+<!-- Statcounter tracking code -->
+  
+<!-- You can add a tracker to track page visits by creating an account at statcounter.com -->
+
+    <!-- End of Statcounter Code -->
+
+  </body>
+  </html>
